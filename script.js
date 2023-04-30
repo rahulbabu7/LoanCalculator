@@ -8,16 +8,20 @@ function calculateResult(e){
     const amount = document.querySelector('#amount');
     const interest = document.querySelector('#interest');
     const years = document.querySelector('#years');
-    const monthly = document.querySelector('#monthly-payment');
+    const monthlyPayment = document.querySelector('#monthly-payment');
     const totalPayment = document.querySelector('#total-payment');
     const totalInterest = document.querySelector('#total-interest');
     
 
     const principal = parseFloat(amount.value);
     const calculatedInterest = parseFloat(interest.value)/100 /12;
-    const calculaedPayment = parseFloat(years.value)
+    const calculatedPayment = parseFloat(years.value)
 
     //compute monthly payment
+
+    const x = Math.pow(1 + calculatedInterest ,calculatedPayment);
+    const monthly = (principal*x*calculatedInterest)/(x-1);
     
+
     e.preventDefault();
 }
