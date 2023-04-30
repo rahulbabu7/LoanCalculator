@@ -12,5 +12,12 @@ function calculateResult(e){
     const totalPayment = document.querySelector('#total-payment');
     const totalInterest = document.querySelector('#total-interest');
     
+
+    const principal = parseFloat(amount.value);
+    const calculatedInterest = parseFloat(interest.value)/100 /12;
+    const calculaedPayment = parseFloat(years.value)
+
+    //compute monthly payment
+    
     e.preventDefault();
 }
